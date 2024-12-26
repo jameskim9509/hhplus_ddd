@@ -26,6 +26,9 @@ public class ApplyService {
 
     public List<ApplyEntity> getByUserIdEager(Long userId)
     {
-        return applyRepository.getByUserIdEager(userId);
+        List<ApplyEntity> applyEntities = applyRepository.getByUserIdEager(userId);
+
+        if (applyEntities.isEmpty()) throw new LectureApplyException(ErrorCode.NOT_FOUND_APPLIED);
+        return applyEntities;
     }
 }
