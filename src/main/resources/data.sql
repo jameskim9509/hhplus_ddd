@@ -1,0 +1,48 @@
+-- 더 좋은 방법 찾아보기
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+insert into member(username, created_at) values('aimy', '2024-12-20 00:00:00');
+insert into member(username, created_at) values('bard', '2024-12-21 00:00:00');
+insert into member(username, created_at) values('koo', '2024-12-22 00:00:00');
+insert into member(username, created_at) values('devi', '2024-12-23 00:00:00');
+insert into member(username, created_at) values('edger', '2024-12-24 00:00:00');
+
+insert into lecture(lecture_name, lecture_date, applicant_count, instructor, category, created_at) values('c lang', '2025-12-24', 0, 'amanda', 'COMPUTER', '2024-12-25 00:00:00');
+insert into lecture(lecture_name, lecture_date, applicant_count, instructor, category, created_at) values('big bang', '2025-12-26', 0, 'Emma', 'SCIENCE', '2024-12-26 00:00:00');
+insert into lecture(lecture_name, lecture_date, applicant_count, instructor, category, created_at) values('fried chicken', '2025-12-27', 0, 'mia', 'COOKING', '2024-12-27 00:00:00');
+insert into lecture(lecture_name, lecture_date, applicant_count, instructor, category, created_at) values('soccer', '2025-12-28', 0, 'abigail', 'SPORTS', '2024-12-28 00:00:00');
+insert into lecture(lecture_name, lecture_date, applicant_count, instructor, category, created_at) values('basketball', '2025-12-28', 0, 'madison', 'SPORTS', '2024-12-28 00:00:00');
+
