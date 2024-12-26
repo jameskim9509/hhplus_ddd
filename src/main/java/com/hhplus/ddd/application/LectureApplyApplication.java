@@ -26,6 +26,12 @@ public class LectureApplyApplication {
     public ApplyEntity applyLecture(Long userId, Long lectureId){
         UserEntity findUser = userService.getById(userId);
         LectureEntity findLecture = lectureService.getByIdWithLock(lectureId);
+        if (applyService.isApplyExist(findUser, findLecture))
+            throw new LectureApplyException(ErrorCode.ALREADY_APPLIED);
+        if (findLecture.getLectureDate().isBefore(LocalDate.now()))
+            throw new LectureApplyException(ErrorCode.PAST_LECTURE_APPLIED);
+        if(findLecture.getApplicantCount() >= LectureService.maxCapacity)
+            throw new LectureApplyException(ErrorCode.APPLICANT_COUNT_EXCEEDED);
 
         findLecture.increaseApplicantCount();
         lectureService.save(findLecture);

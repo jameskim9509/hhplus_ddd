@@ -100,4 +100,39 @@ class LectureApplyApplicationUnitTest {
         assertThat(lectureEntities.stream().anyMatch(l -> l.getId() == 1L)).isEqualTo(true);
         assertThat(lectureEntities.stream().anyMatch(l -> l.getId() == 2L)).isEqualTo(true);
     }
+
+    @DisplayName("이미 신청한 강의 오류 발생")
+    @Test
+    void 이미_신청한_강의_입니다()
+    {
+        // given
+        Mockito.doReturn(true)
+                .when(applyService)
+                .isApplyExist(Mockito.any(), Mockito.any());
+
+        // when, then
+        Assertions.assertThatThrownBy(
+                        () -> lectureApplyApplication.applyLecture(1L, 1L)
+                ).isInstanceOf(LectureApplyException.class)
+                .hasMessage("이미 신청한 강의입니다.");
+    }
+
+    @DisplayName("과거의 강의 신청시 오류 발생")
+    @Test
+    void 과거의_강의는_신청할_수_없습니다()
+    {
+        // given
+        Mockito.doReturn(
+                LectureEntity.builder()
+                        .id(1L)
+                        .lectureDate(LocalDate.now().minusDays(1))
+                        .build()
+        ).when(lectureService).getByIdWithLock(1L);
+
+        // when, then
+        Assertions.assertThatThrownBy(
+                        () -> lectureApplyApplication.applyLecture(1L, 1L)
+                ).isInstanceOf(LectureApplyException.class)
+                .hasMessage("과거의 강의는 신청할 수 없습니다.");
+    }
 }
