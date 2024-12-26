@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/lecture")
 public class LectureController {
     private final LectureApplyApplication lectureApplyApplication;
 
